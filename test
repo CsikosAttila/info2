@@ -1,0 +1,58 @@
+ # Házi feladat
+## Zenetár
+Specifikáció
+
+Feladat informális leírása:
+Az alkalmazás célja egy zeneszámokat tartalmazó adatbázis kezelése, bővítése, szerkesztése és használata felhasználóbarát módon.
+A felhasználó képes magának lejátszási listát összeállítani, és az általa kedvelt stílusokból képes az alkalmazás több a tetszésének megfelelő albumot ajánlani.
+
+Elérhető funkciók:
+Zeneszámok szerkesztése:
+•	Új zeneszám felvétele
+•	Meglévő zeneszám törlése
+•	Meglévő zeneszám adatainak szerkesztése
+•	Az adatbázisban tárolt zeneszámok kilistázása, keresése cím, zeneszerző, stílus és BPM alapján
+
+Zeneszerzők szerkesztése:
+•	Új zeneszerző felvétele
+•	Meglévő zeneszerző törlése
+•	Meglévő zeneszerző adatainak szerkesztése
+•	Az adatbázisban tárolt zeneszerzők kilistázása, keresése név és származás alapján
+
+Albumok szerkesztése:
+•	Új album felvétele
+•	Meglévő album törlése
+•	Meglévő album adatainak szerkesztése
+•	Az adatbázisban tárolt albumok kilistázása, keresése cím, zeneszerző és stílusok alapján
+
+Stílusok szerkesztése:
+•	Új stílus felvétele
+•	Meglévő stílus törlése
+•	Az adatbázisban tárolt stílusok kilistázása, keresése nevük alapján
+
+Egyéb:
+•	Lejátszási lista összeállítása
+•	Album ajánló kedvelt stílusok alapján
+
+Adatbázis séma:
+Zeneszerző: név, munkásságának kezdete, származás, ALBUMJAI, ZENESZÁMAI
+Album: cím, kiadási év, stílus1 (stílus2, stílus3 (legalább 1db kötelező, de 3db is megadható)), SZERZŐJE, ZENESZÁMAI
+Zeneszám: cím, hossz, BPM (tempó), stílus, SZERZŐJE, ALBUM
+Stílus: név
+
+Felhasználók és jogosultságaik:
+Három szintű beléptetési rendszert tervezek: admin, user, browser
+Mindegyiknek más-más szerkesztési és hozzáférési jogosultsága lesz.
+Browser:
+•	Fiók létrehozása nem szükséges
+•	Az adatbázis elemeit képes kilistázni és keresni köztük
+User:
+•	Fiók létrehozása kötelező
+•	Megkapja a browser jogosultságait
+•	Képes lejátszási listát létrehozni
+•	Használhatja az album ajánló funkciót
+•	Az adatbázis adatait bővítheti és szerkesztheti
+Admin:
+•	Megkapja a user jogosultságait
+•	Az adatbázis adatai közül törölni is tud
+•	Kilistázhatja a felhasználókat és adhat nekik admin jogosultságot
