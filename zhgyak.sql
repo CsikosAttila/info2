@@ -1,9 +1,9 @@
 -- adatbazis letrehozasa
-DROP DATABASE IF EXISTS mintazh_solol;
-CREATE DATABASE mintazh_solol
+DROP DATABASE IF EXISTS zhgyak;
+CREATE DATABASE zhgyak
 DEFAULT CHARACTER SET utf8
 DEFAULT COLLATE utf8_general_ci;
-use mintazh_solol;
+use zhgyak;
 
 -- faj tablazat letrehozasa
 CREATE TABLE faj(
